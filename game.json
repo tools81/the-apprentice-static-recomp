@@ -1,0 +1,23 @@
+{
+  "title": "The Apprentice",
+  "exe_name": "apprentice",
+  "version": "1.0.0",
+  "update_repo": "tools81/the-apprentice-static-recomp",
+  "tv": "ntsc",
+  "invincibility": {"life_byte": "0x108c6d"},
+  "modules": [
+    {"file": "CMDS/cdi_loader", "base": "0x13F000", "interpret": true},
+    {"file": "CMDS/cdi_appl01", "base": "0x100000", "extra_entries": []},
+    {"file": "CMDS/cdi_appl02", "base": "0x104000", "extra_entries": ["0x105506", "0x1044a8", "0x1043f6"], "skip": ["cdi_vbltrap"]},
+    {"file": "CMDS/cdi_appl03", "base": "0x108000", "extra_entries": [], "skip": ["cdi_vbltrap"],
+     "stb_skip": ["btext", "bname", "refs", "object_list", "object_list_end", "routine_list",
+                  "vbl_list", "_sysevname", "etext"]},
+    {"file": "CMDS/cdi_appl04", "base": "0x10E000",
+     "extra_entries": [
+       "0x10e60a", "0x10e8c6", "0x10e9c0", "0x10eb12", "0x10f1e0", "0x10f320", "0x10f328", "0x10f33e",
+       "0x10f424", "0x10f434", "0x10f4bc", "0x10f4d2", "0x10f504", "0x10f51e", "0x10f568", "0x10f5b2",
+       "0x10f5be", "0x10f5ea", "0x10f642", "0x10f648", "0x10f66c", "0x10f672", "0x10f716", "0x10f7de",
+       "0x10f80a", "0x10f8e4", "0x10f956", "0x10fa30", "0x10fbee", "0x10fc32", "0x10fc4a"]},
+    {"file": "CMDS/cdi_start", "base": "0x114000", "extra_entries": []}
+  ]
+}

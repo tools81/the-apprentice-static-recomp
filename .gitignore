@@ -1,0 +1,14 @@
+# disc image and data extracted from it
+rom/
+extracted/
+# build output
+build/
+run/
+*.exe
+saves/
+*.log
+cmp/
+# release packages (tools/package.ps1)
+dist/
+__pycache__/
+.venv/
